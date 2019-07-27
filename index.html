@@ -1,0 +1,68 @@
+<html>
+    <head>
+		<title>
+			snake
+		</title>
+	<style>
+		#border{
+		background-image: url("deathnote.png");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		}
+		#head{
+			font-size: 500%;
+			color:azure;
+			position:absolute;
+			left: 15%;
+			top: 8%;
+		}
+		#abc{
+			color: crimson;
+			position:absolute;
+			left: 18%;
+			top: 30%;
+		}
+		#sc{
+			color:crimson;
+			position: absolute;
+			left: 18%;
+			top: 50%
+		}
+	</style>
+</head>
+
+<body id="border">
+
+	<p id="head">SNAKE</p>
+
+	<a href="a.html">
+		<h1 id="abc">NEW GAME</h1>
+	</a>
+
+	<p id="sc"></p>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+var bestscore=0;	
+var bs=window.location.href;
+var c="";
+for(var i=0;i<bs.length;i++){
+	if(bs.charAt(i)=='?')
+	{
+		for(var j=i+1;j<bs.length;j++)
+			c=c+bs.charAt(j);
+		break;
+	}	
+	
+}
+console.log(c);
+ if(bestscore< parseInt(c)){
+	bestscore=parseInt(c);
+ }
+bestscore="Best Score : " + bestscore;
+$('#sc').html(bestscore);
+</script>
+
+
+</html>
