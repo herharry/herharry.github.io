@@ -34,15 +34,56 @@
 <body id="border">
 
 	<p id="head">SNAKE</p>
-
+<button onclick="httpGet('http://localhost:8080/SampleProject/show?id=1')">BEST SCORE</button>
 	<a href="a.html">
 		<h1 id="abc">NEW GAME</h1>
 	</a>
 
 	<p id="sc"></p>
 </body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+	function sendEmail(msg) {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Port: 587,
+	EnableSsl: true,
+	Username : "spjp3210@gmail.com",
+	Password : "say password",
+	To : 'spjp3210@gmail.com',
+	From : "spjp3210@gmail.com",
+	Subject : "sampletest",
+	Body : msg,
+	}).then(
+		//message => alert(message)
+	);
+}
+  function httpGet(theUrl)
+{
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+        	//alert(xmlhttp.responseText);
+        	//sendEmail(xmlhttp.responseText);
+        	sendEmail(xmlhttp.responseText);
+            return xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET", theUrl, false );
+    xmlhttp.send();
+
+}
+
 
 var bestscore=0;	
 var bs=window.location.href;
