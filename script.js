@@ -1,4 +1,4 @@
-fetch("https://pay.localzoho.com/payouts")
+fetch("https://pay.localzoho.com/payouts",{mode: 'no-cors'})
         .then(res => res.json())
         .then(res => this.loadBannerInCarousel(this.formatResponse(res)))
         .catch(err => err);
