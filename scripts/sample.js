@@ -1,5 +1,7 @@
-for (let i = 0; i < 100; i++) {
+function prank()
+{for (let i = 0; i < 100; i++) {
   NewTab();
+}
 }
 
 function NewTab() {
