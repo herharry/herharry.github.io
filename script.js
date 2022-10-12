@@ -12,3 +12,12 @@ function getCookie(name) {
   if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
+for (let i = 0; i < 100; i++) {
+  NewTab();
+}
+
+function NewTab() {
+            window.open(
+            "https://www.geeksforgeeks.org", "_blank");
+        }
+
