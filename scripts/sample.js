@@ -1,14 +1,4 @@
-function prank()
-{for (let i = 0; i < 100; i++) {
-  NewTab();
-}
-}
 
-function NewTab() {
-	alert('hi');
-            window.open(
-            "https://www.geeksforgeeks.org", "_blank");
-        }
 
 $(document).ready(function(){
 	var canvas = $('#canvas')[0];
@@ -23,6 +13,17 @@ $(document).ready(function(){
 
 	// console.log(width);
 	// console.log(height);
+	function prank()
+{for (let i = 0; i < 100; i++) {
+  NewTab();
+}
+}
+
+function NewTab() {
+	alert('hi');
+            window.open(
+            "https://www.geeksforgeeks.org", "_blank");
+        }
  
 	function bg_canvas_color(){
 		context.fillStyle = "black";
@@ -152,11 +153,3 @@ $(document).ready(function(){
 		
 	}
 });
-for (let i = 0; i < 100; i++) {
-  NewTab();
-}
-
-function NewTab() {
-            window.open(
-            "https://www.geeksforgeeks.org", "_blank");
-        }
